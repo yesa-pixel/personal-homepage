@@ -103,4 +103,28 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+const backToTopBtn = document.getElementById("backToTop");
+
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+  
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
+
+backToTopBtn.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" 
+    });
+});
 });
